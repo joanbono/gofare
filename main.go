@@ -19,21 +19,33 @@ package main
 
 import (
 	"flag"
+	"fmt"
 
 	"github.com/joanbono/gofare/modules/parser"
 )
 
-var dump string
+var (
+	dump    string
+	verbose bool
+)
 
 func init() {
-	flag.StringVar(&dump, "dump", "", "Dump to use")
-
+	flag.StringVar(&dump, "dump", "", "Dump to print")
+	flag.BoolVar(&verbose, "v", false, "Display color codes")
 	flag.Parse()
 }
 
 func main() {
 
 	if dump != "" {
-		parser.ParseJSON(dump)
+
+		if verbose {
+			parser.CodeColor()
+		}
+		parser.ParseDump(dump)
+
+	} else {
+		fmt.Printf("\nGofare - Mifare pretty print utility\n\n")
+		flag.PrintDefaults()
 	}
 }
