@@ -17,3 +17,4 @@
 *.bin
 *.mfd
 build/*
+*-key.dic

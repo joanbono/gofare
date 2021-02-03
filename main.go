@@ -27,11 +27,13 @@ import (
 var (
 	dump    string
 	verbose bool
+	keys    bool
 )
 
 func init() {
 	flag.StringVar(&dump, "dump", "", "Dump to print")
 	flag.BoolVar(&verbose, "v", false, "Display color codes")
+	flag.BoolVar(&keys, "keys", false, "Save keys to UID-key.dic")
 	flag.Parse()
 }
 
@@ -42,7 +44,7 @@ func main() {
 		if verbose {
 			parser.CodeColor()
 		}
-		parser.ParseDump(dump)
+		parser.ParseDump(dump, keys)
 
 	} else {
 		fmt.Printf("\nGofare - Mifare pretty print utility\n\n")

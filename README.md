@@ -18,3 +18,11 @@ $> gofare -dump MifareDump.bin -v
 ```
 
 ![](img/img002.png)
+
+To save the keys from a dump:
+
+```sh
+$> gofare -dump MifareDump.bin -keys
+```
+
+![](img/img003.png)
