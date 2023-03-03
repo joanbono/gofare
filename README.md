@@ -9,7 +9,7 @@ Based on the mighty [`mfdread`](https://github.com/zhovner/mfdread).
 $> gofare -dump MifareDump.bin
 ```
 
-![](img/img001.png)
+![](img/img0001.png)
 
 To get the color codes:
 
@@ -17,7 +17,7 @@ To get the color codes:
 $> gofare -dump MifareDump.bin -v
 ```
 
-![](img/img002.png)
+![](img/img0002.png)
 
 To save the keys from a dump:
 
@@ -25,4 +25,4 @@ To save the keys from a dump:
 $> gofare -dump MifareDump.bin -keys
 ```
 
-![](img/img003.png)
+![](img/img0003.png)
